@@ -11,7 +11,7 @@ I'm a **frontend developer from Spain**:
 - 💬 I also have some skills in backend with NodeJS and Laravel.
 - ⚡️ Fun fact: I love good food.
 
-## My stack
+## My stack 🛠
 
 <a href="#">
   <img
