@@ -122,3 +122,21 @@ I'm a **frontend developer from Spain**:
     src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png"
   />
 </a>
+
+<a href="#">
+  <img
+    align="left"
+    alt="TailwindCSS"
+    title="TailwindCSS"
+    width="36px"
+    src="https://camo.githubusercontent.com/b5a4579e36f5e9df6020f467fb0d3aca745c764749c6a97d2a07ba5773fbee4f/68747470733a2f2f63646e2d69636f6e732d706e672e666c617469636f6e2e636f6d2f3531322f3232362f3232363737372e706e67"
+  />
+</a>
+
+## I speak 💬
+- Catalan (Native)
+- Spanish (Advanced level / native)
+- English (Medium level)
+
+## Projects 🚀
+- <a href="https://github.com/agomez1999/ToDo_App">ToDo Task App</a> **(React Native)**
