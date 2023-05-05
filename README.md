@@ -79,7 +79,7 @@ I'm a **frontend developer from Spain**:
     alt="Vue"
     title="Vue"
     width="36px"
-    src="https://w7.pngwing.com/pngs/854/555/png-transparent-vue-js-hd-logo-thumbnail.png"
+           src="https://camo.githubusercontent.com/077997d77bfa74b144c9e286e65143b4edc547dc948098491264bb2dde282d6b/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f7675656a732f7675656a732d6f726967696e616c2e737667"
   />
 </a>
 
