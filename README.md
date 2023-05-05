@@ -11,6 +11,14 @@ I'm a **frontend developer from Spain**:
 - 💬 I also have some skills in backend with NodeJS and Laravel.
 - ⚡️ Fun fact: I love good food.
 
+## I speak 💬
+- Catalan (Native)
+- Spanish (Advanced level / native)
+- English (Medium level)
+
+## Projects 🚀
+- <a href="https://github.com/agomez1999/ToDo_App">ToDo Task App</a> **(React Native)**
+
 ## My stack 🛠
 <div style="display: flex, gap: 3px">
  <a href="#">
@@ -133,13 +141,3 @@ I'm a **frontend developer from Spain**:
    />
  </a>
 </div>
-
----
-
-## I speak 💬
-- Catalan (Native)
-- Spanish (Advanced level / native)
-- English (Medium level)
-
-## Projects 🚀
-- <a href="https://github.com/agomez1999/ToDo_App">ToDo Task App</a> **(React Native)**
