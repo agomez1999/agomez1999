@@ -133,6 +133,8 @@ I'm a **frontend developer from Spain**:
   />
 </a>
 
+</br>
+
 ## I speak 💬
 - Catalan (Native)
 - Spanish (Advanced level / native)
