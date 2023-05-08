@@ -17,8 +17,6 @@ I'm a **frontend developer from Spain**:
 - English (Medium level)
 
 ## Projects 🚀
-- <a href="https://github.com/agomez1999/Portfolio">Portfolio</a> **(ReactJS)**
-- <a href="https://github.com/agomez1999/curriculum_vitae">Curriculum Vitae</a> **(ReactJS)**
 - <a href="https://github.com/agomez1999/ToDo_App">ToDo Task App</a> **(React Native)**
 
 ## My stack 🛠
