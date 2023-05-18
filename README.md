@@ -18,6 +18,10 @@ I'm a **frontend developer from Spain**:
 ## Projects 🚀
 - <a href="https://github.com/agomez1999/ToDo_App">ToDo Task App</a> **(React Native)**
 
+## Contact me
+- ✉️ Mail: alexalbons@hotmail.com.
+- 📱  Phone: +34 634 637 490
+
 ## My stack 🛠
 <div style="display: flex, gap: 3px">
  <a href="#">
@@ -140,6 +144,3 @@ I'm a **frontend developer from Spain**:
    />
  </a>
 </div>
-## Contact me
-- ✉️ Mail: alexalbons@hotmail.com.
-- 📱  Phone: +34 634 637 490
