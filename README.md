@@ -7,7 +7,6 @@ I'm a **frontend developer from Spain**:
 - 🏢 I'm currently working on **ApliEmporda** as junior developer.
 - 🌱 I’m currently learning **ReactJS and React Native**.
 - ⚙️ I use daily: `.js`, `.html`, `.css`, `.php`.
-- ✉️ Contact me: alexalbons@hotmail.com.
 - 💬 I also have some skills in backend with NodeJS and Laravel.
 - ⚡️ Fun fact: I love good food.
 
@@ -141,3 +140,6 @@ I'm a **frontend developer from Spain**:
    />
  </a>
 </div>
+## Contact me
+- ✉️ Mail: alexalbons@hotmail.com.
+- 📱  Phone: +34 634 637 490
