@@ -5,11 +5,11 @@ I'm a **frontend developer from Spain**:
  
 
 - 🏢 I'm currently working on **ApliEmporda** as junior developer.
-- 🌱 I’m currently learning **ReactJS and React Native**.
+- 🌱 I’m currently learning **ReactJS, React Native and Laravel**.
 - ⚙️ I use daily: `.js`, `.html`, `.css`, `.php`.
 - 💬 I also have some skills in backend with NodeJS and Laravel.
 - ⚡️ Fun fact: I love good food.
-
+- Also I work with TailwindCSS and others css frameworks.
 ## I speak 💬
 - Catalan (Native)
 - Spanish (Advanced level / native)
