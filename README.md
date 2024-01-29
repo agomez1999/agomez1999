@@ -4,7 +4,7 @@
 I'm a **frontend developer from Spain**:
  
 
-- 🏢 I'm currently working on **ApliEmporda** as junior developer.
+- 🏢 I'm currently working on **Gesthip** as junior developer.
 - 🌱 I’m currently learning **ReactJS, React Native and Laravel**.
 - ⚙️ I use daily: `.js`, `.html`, `.css`, `.php`.
 - 💬 I also have some skills in backend with NodeJS and Laravel.
