@@ -90,7 +90,7 @@ I'm a **frontend developer from Spain**:
      alt="Vue"
      title="Vue"
      width="36px"
-     src="[https://camo.githubusercontent.com/077997d77bfa74b144c9e286e65143b4edc547dc948098491264bb2dde282d6b/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f7675656a732f7675656a732d6f726967696e616c2e737667](https://w7.pngwing.com/pngs/854/555/png-transparent-vue-js-hd-logo-thumbnail.png)"
+     src="https://w7.pngwing.com/pngs/854/555/png-transparent-vue-js-hd-logo.png"
    />
  </a>
 
@@ -137,10 +137,10 @@ I'm a **frontend developer from Spain**:
  <a href="#">
    <img
      align="left"
-     alt="TailwindCSS"
-     title="TailwindCSS"
+     alt="Next.js"
+     title="Next.js"
      width="36px"
-     src="https://camo.githubusercontent.com/b5a4579e36f5e9df6020f467fb0d3aca745c764749c6a97d2a07ba5773fbee4f/68747470733a2f2f63646e2d69636f6e732d706e672e666c617469636f6e2e636f6d2f3531322f3232362f3232363737372e706e67"
+     src="https://w7.pngwing.com/pngs/643/143/png-transparent-nextjs-hd-logo.png"
    />
  </a>
 </div>
