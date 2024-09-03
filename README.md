@@ -5,7 +5,7 @@ I'm a **frontend developer from Spain**:
  
 
 - 🏢 I'm currently working on **Gesthip** as junior developer.
-- 🌱 I’m currently learning **ReactJS, React Native and Laravel**.
+- 🌱 I’m currently learning **Next.js and Laravel**.
 - ⚙️ I use daily: `.js`, `.html`, `.css`, `.php`.
 - 💬 I also have some skills in backend with NodeJS and Laravel.
 - ⚡️ Fun fact: I love good food.
@@ -90,7 +90,7 @@ I'm a **frontend developer from Spain**:
      alt="Vue"
      title="Vue"
      width="36px"
-            src="https://camo.githubusercontent.com/077997d77bfa74b144c9e286e65143b4edc547dc948098491264bb2dde282d6b/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f7675656a732f7675656a732d6f726967696e616c2e737667"
+     src="[https://camo.githubusercontent.com/077997d77bfa74b144c9e286e65143b4edc547dc948098491264bb2dde282d6b/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f7675656a732f7675656a732d6f726967696e616c2e737667](https://w7.pngwing.com/pngs/854/555/png-transparent-vue-js-hd-logo-thumbnail.png)"
    />
  </a>
 
