@@ -90,7 +90,7 @@ I'm a **frontend developer from Spain**:
      alt="Vue"
      title="Vue"
      width="36px"
-     src="https://w7.pngwing.com/pngs/854/555/png-transparent-vue-js-hd-logo.png"
+     src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/512px-Vue.js_Logo_2.svg.png?20170919082558"
    />
  </a>
 
@@ -140,7 +140,7 @@ I'm a **frontend developer from Spain**:
      alt="Next.js"
      title="Next.js"
      width="36px"
-     src="https://w7.pngwing.com/pngs/643/143/png-transparent-nextjs-hd-logo.png"
+     src="https://static-00.iconduck.com/assets.00/nextjs-icon-512x309-yynfidez.png"
    />
  </a>
 </div>
