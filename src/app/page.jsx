@@ -10,7 +10,6 @@ import Experience from "../components/Experience";
 import Stack from "../components/Stack";
 import Projects from "../components/Projects";
 
-
 export default function Home() {
   return (
     <div className="min-h-screen p-4 sm:p-8 sm:px-40">

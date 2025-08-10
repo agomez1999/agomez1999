@@ -12,6 +12,9 @@ const montserrat = Montserrat({
 export const metadata = {
   title: "Àlex Gómez - Desarrollador Fullstack Web",
   description: "Portfolio profesional de Àlex Gómez, desarrollador fullstack especializado en Next.js, React, Laravel y Vue. Diseño y desarrollo de aplicaciones web modernas.",
+  icons: {
+    icon: '/favicon.png'
+  }
 };
 
 export default function RootLayout({ children }) {
