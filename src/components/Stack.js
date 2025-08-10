@@ -13,10 +13,10 @@ export default function Stack() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Frontend */}
-          <div className="bg-white px-2 py-1 rounded flex flex-col gap-6">
+          <div className="bg-white shadow-xl px-2 py-1 rounded flex flex-col gap-6">
             <span className="font-semibold text-lg">Frontend</span>
 
-            <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center justify-between gap-2 flex-wrap">
               <div className="flex flex-col items-center hover:scale-110 transition-all duration-400">
                 <IoLogoJavascript title="JavaScript" className="text-yellow-500" size={50} />
                 <span>JavaScript</span>
@@ -40,11 +40,10 @@ export default function Stack() {
           </div>
 
           {/* Backend */}
-          <div className="bg-white px-2 py-1 rounded flex flex-col gap-6">
+          <div className="bg-white shadow-xl px-2 py-1 rounded flex flex-col gap-6">
             <span className="font-semibold text-lg">Backend</span>
 
-            <div className="flex items-center justify-between gap-2">
-
+            <div className="flex items-center justify-between gap-2 flex-wrap">
               <div className="flex flex-col items-center hover:scale-110 transition-all duration-400">
                 <FaPhp title="PHP" className="text-[#777BB4]" size={50} />
                 <span>PHP</span>
@@ -68,10 +67,10 @@ export default function Stack() {
           </div>
 
           {/* Tools */}
-          <div className="bg-white px-2 py-1 rounded flex flex-col gap-6">
+          <div className="bg-white shadow-xl px-2 py-1 rounded flex flex-col gap-6">
             <span className="font-semibold text-lg">Herramientas</span>
 
-            <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center justify-between gap-2 flex-wrap">
               <div className="flex flex-col items-center hover:scale-110 transition-all duration-400">
                 <RiTailwindCssFill title="Tailwind CSS" className="text-blue-500" size={50} />
                 <span>Tailwind CSS</span>
