@@ -14,9 +14,8 @@ export default function Header() {
 
   const links = [
     { id: 1, href: "/me", label: "Sobre mí" },
-    { id: 2, href: "/studies", label: "Formación" },
-    { id: 3, href: "/professional-career", label: "Experiencia profesional" },
-    { id: 4, href: "/contacte", label: "Contacto" },
+    { id: 2, href: "/professional-career", label: "Experiencia profesional" },
+    { id: 3, href: "/contact", label: "Contacto" },
   ];
 
   return (
