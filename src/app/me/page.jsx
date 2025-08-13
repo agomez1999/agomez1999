@@ -4,7 +4,7 @@ export default function Me() {
   return (
     <main className="min-h-screen p-4 sm:p-8 sm:px-40 flex justify-center items-center">
       <div className="flex flex-col sm:flex-row gap-6 sm:bg-white sm:p-4 sm:rounded sm:shadow-xl">
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 items-center justify-center flex sm:items-start sm:justify-start">
           <Image alt="Àlex Gómez" src="/images/foto-carnet-completa.webp" width={220} height={350} className="rounded mix-blend-multiply" />
         </div>
         <div className="text-justify leading-relaxed space-y-3">

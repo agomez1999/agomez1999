@@ -7,7 +7,7 @@ export default function Custom404() {
       <div className="flex flex-col gap-4 items-center">
         <Image alt="Not found" src="/images/404.webp" width={300} height={400} />
         <h1 className="text-3xl font-semibold">Página no encontrada</h1>
-        <Link href="/" className="px-2 py-1 border rounded-full bg-[#E6E6E6] hover:scale-110 transition-all duration-400">Volver al Home</Link>
+        <Link href="/" className="px-2 py-1 border rounded-full bg-[#E6E6E6] hover:scale-110 transition-all duration-400">Volver al inicio</Link>
       </div>
     </div>
   );
