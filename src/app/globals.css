@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  --background: #E0D8DE;
-  --foreground: #0A0A0A;
+  /* Fondos */
+  --bg-primary:    #0D0F14;
+  --bg-secondary:  #13161D;
+  --bg-tertiary:   #1A1E28;
+
+  /* Texto */
+  --text-primary:   #F0F2F7;
+  --text-secondary: #8B92A8;
+  --text-muted:     #4A5168;
+
+  /* Acento — cyan menta */
+  --accent:       #64FFDA;
+  --accent-dim:   rgba(100, 255, 218, 0.1);
+  --accent-hover: #52E8C5;
+
+  /* Bordes */
+  --border:        rgba(240, 242, 247, 0.08);
+  --border-accent: rgba(100, 255, 218, 0.3);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-jakarta);
+  --font-mono: var(--font-jetbrains);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-montserrat), sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-jakarta), sans-serif;
+}
+
+/* Offset para la navbar fija */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Selección de texto */
+::selection {
+  background: var(--accent-dim);
+  color: var(--accent);
 }

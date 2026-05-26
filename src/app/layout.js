@@ -1,29 +1,39 @@
-import { Montserrat } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
-const montserrat = Montserrat({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-montserrat",
+  variable: "--font-jakarta",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+  weight: ["400", "500"],
 });
 
 export const metadata = {
-  title: "Àlex Gómez - Desarrollador Fullstack Web",
-  description: "Portfolio profesional de Àlex Gómez, desarrollador fullstack especializado en Next.js, React, Laravel y Vue. Diseño y desarrollo de aplicaciones web modernas.",
+  title: "Àlex Gómez · Full-Stack Developer",
+  description:
+    "Portfolio de Àlex Gómez, Full-Stack Developer con 3+ años de experiencia en JavaScript, PHP, React, Next.js, Laravel y Vue. Disponible para nuevos proyectos.",
   icons: {
-    icon: '/favicon.png'
-  }
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={`${montserrat.variable} antialiased`}>
-        <Header />
+      <body className={`${jakarta.variable} ${jetbrains.variable} antialiased`}>
+        <NavBar />
         {children}
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

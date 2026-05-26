@@ -2,9 +2,28 @@ export const projects = [
   {
     id: 1,
     name: "TodoApp",
-    description: "Aplicación móvil para la gestión de tareas, diseñada con una interfaz intuitiva y optimizada para el uso diario.",
+    shortDescription:
+      "App móvil de gestión de tareas con sincronización remota.",
+    description:
+      "Aplicación móvil para la gestión de tareas construida con React Native. Incluye sincronización con base de datos remota, autenticación de usuario y diseño adaptado para iOS y Android.",
     techStack: ["React Native", "MySQLi"],
     year: 2024,
-    link: "https://github.com/agomez1999/ToDo_App"
-  }
+    link: "https://github.com/agomez1999/ToDo_App",
+    liveUrl: null,
+    image: "/images/projects/TaskApp/image1.webp",
+    featured: true,
+  },
+  {
+    id: 2,
+    name: "Portfolio Personal",
+    shortDescription: "Este portfolio, construido con Next.js 15 y Framer Motion.",
+    description:
+      "Portfolio personal diseñado y desarrollado desde cero. Single-page scroll con animaciones de entrada, dark mode, tipografía moderna y arquitectura App Router de Next.js 15.",
+    techStack: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    year: 2025,
+    link: "https://github.com/agomez1999",
+    liveUrl: null,
+    image: null,
+    featured: false,
+  },
 ];
