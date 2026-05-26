@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import { LanguageProvider } from "@/i18n/LanguageContext";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -30,10 +31,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body className={`${jakarta.variable} ${jetbrains.variable} antialiased`}>
-        <NavBar />
-        {children}
-        <Footer />
-        <ScrollToTop />
+        <LanguageProvider>
+          <NavBar />
+          {children}
+          <Footer />
+          <ScrollToTop />
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowUp } from "react-icons/fa";
+import { useLanguage } from "@/i18n/useLanguage";
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 300);
@@ -24,7 +26,7 @@ export default function ScrollToTop() {
           exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.2 }}
           onClick={scrollToTop}
-          aria-label="Volver al inicio"
+          aria-label={t.contact.scrollTop}
           className="fixed bottom-6 right-6 z-40 p-3 rounded-full transition-colors duration-200 cursor-pointer"
           style={{
             background: "var(--bg-secondary)",

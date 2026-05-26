@@ -1,6 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "@/i18n/useLanguage";
 
 export default function NotFound() {
+  const { t } = useLanguage();
+
   return (
     <main
       className="min-h-screen flex items-center justify-center px-6"
@@ -24,10 +29,10 @@ export default function NotFound() {
             className="text-2xl font-bold"
             style={{ color: "var(--text-primary)" }}
           >
-            Página no encontrada
+            {t.notFound.title}
           </h1>
           <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
-            Parece que esta ruta no existe.
+            {t.notFound.body}
           </p>
         </div>
 
@@ -39,7 +44,7 @@ export default function NotFound() {
             color: "var(--accent)",
           }}
         >
-          ← Volver al inicio
+          {t.notFound.back}
         </Link>
       </div>
     </main>

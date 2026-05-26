@@ -3,13 +3,17 @@
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/ui/SectionTitle";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { experiences } from "@/utils/experiences";
+import { experienceData } from "@/utils/experienceData";
+import { useLanguage } from "@/i18n/useLanguage";
 
 export default function ExperienceSection() {
+  const { lang, t } = useLanguage();
+  const experiences = experienceData[lang];
+
   return (
     <section id="experiencia" className="py-20 sm:py-28">
       <AnimatedSection>
-        <SectionTitle number="02" title="Experiencia" />
+        <SectionTitle number="02" title={t.experience.title} />
       </AnimatedSection>
 
       <div className="relative">
@@ -94,9 +98,9 @@ export default function ExperienceSection() {
 
               {/* Tech pills */}
               <div className="flex flex-wrap gap-2">
-                {exp.tech.map((t) => (
+                {exp.tech.map((tech) => (
                   <span
-                    key={t}
+                    key={tech}
                     className="text-xs px-2.5 py-1 rounded-full"
                     style={{
                       background: "var(--accent-dim)",
@@ -105,7 +109,7 @@ export default function ExperienceSection() {
                       fontFamily: "var(--font-jetbrains)",
                     }}
                   >
-                    {t}
+                    {tech}
                   </span>
                 ))}
               </div>
@@ -125,7 +129,7 @@ export default function ExperienceSection() {
           onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
           onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
         >
-          Ver CV completo
+          {t.experience.viewCV}
           <span
             className="transition-transform duration-200 group-hover:translate-x-1"
             style={{ fontFamily: "var(--font-jetbrains)" }}

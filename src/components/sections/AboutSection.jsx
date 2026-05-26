@@ -1,17 +1,22 @@
+"use client";
+
 import SectionTitle from "@/components/ui/SectionTitle";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-
-const stats = [
-  { value: "4+",  label: "Años de experiencia" },
-  { value: "3",   label: "Empresas" },
-  { value: "12+", label: "Tecnologías" },
-];
+import { useLanguage } from "@/i18n/useLanguage";
 
 export default function AboutSection() {
+  const { t } = useLanguage();
+
+  const stats = [
+    { value: "4+",  label: t.about.stats.experience },
+    { value: "3",   label: t.about.stats.companies },
+    { value: "12+", label: t.about.stats.tech },
+  ];
+
   return (
     <section id="about" className="py-20 sm:py-28">
       <AnimatedSection>
-        <SectionTitle number="01" title="Sobre mí" />
+        <SectionTitle number="01" title={t.about.title} />
       </AnimatedSection>
 
       <div className="flex flex-col gap-12">
@@ -22,29 +27,25 @@ export default function AboutSection() {
             style={{ color: "var(--text-secondary)" }}
           >
             <p>
-              Empecé a programar profesionalmente en 2022 como el{" "}
+              {t.about.bio1_prefix}{" "}
               <span style={{ color: "var(--text-primary)" }} className="font-medium">
-                primer desarrollador web de ApliEmporda
+                {t.about.bio1_emphasis}
               </span>
-              , donde pasé de mantener sitios estáticos a liderar el
-              desarrollo de una aplicación Laravel con su propia app React
-              Native.
+              {t.about.bio1_suffix}
             </p>
             <p>
-              Actualmente en{" "}
+              {t.about.bio2_prefix}{" "}
               <span style={{ color: "var(--text-primary)" }} className="font-medium">
-                Avantiam
+                {t.about.bio2_company}
               </span>
-              , construyendo una aplicación full-stack con{" "}
-              <span style={{ color: "var(--accent)" }}>arquitectura hexagonal</span>
-              {" "}usando Laravel, Lumen, Vue 3, MongoDB y Docker. Me muevo
-              cómodo entre frontend y backend, y disfruto especialmente del
-              diseño de arquitecturas limpias y escalables.
+              {t.about.bio2_middle}{" "}
+              <span style={{ color: "var(--accent)" }}>{t.about.bio2_accent}</span>
+              {t.about.bio2_suffix}
             </p>
             <p>
-              Mi stack personal:{" "}
+              {t.about.bio3_prefix}{" "}
               <span style={{ color: "var(--accent)" }}>
-                Laravel, Next.js, React y Tailwind.
+                {t.about.bio3_accent}
               </span>
             </p>
           </div>

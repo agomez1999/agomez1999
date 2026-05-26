@@ -3,38 +3,41 @@
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/ui/SectionTitle";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { useLanguage } from "@/i18n/useLanguage";
 
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { FaReact, FaVuejs, FaLaravel, FaPhp, FaGitAlt, FaGithub, FaDocker } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiMongodb } from "react-icons/si";
 
-const categories = [
+// Las keys (frontend/backend/tools y main/professional) son invariantes
+// Las etiquetas traducidas se obtienen en render desde t.stack
+const STACK_DATA = [
   {
-    title: "Frontend",
+    key: "frontend",
     items: [
-      { icon: <IoLogoJavascript className="text-yellow-400" size={26} />, name: "JavaScript",  badge: "Principal" },
-      { icon: <FaReact className="text-blue-400" size={26} />,            name: "React",        badge: "Principal" },
-      { icon: <RiNextjsFill size={26} />,                                  name: "Next.js",      badge: "Principal" },
-      { icon: <FaVuejs className="text-green-400" size={26} />,            name: "Vue 3",        badge: "Profesional" },
+      { icon: <IoLogoJavascript className="text-yellow-400" size={26} />, name: "JavaScript",  badgeKey: "main" },
+      { icon: <FaReact className="text-blue-400" size={26} />,            name: "React",        badgeKey: "main" },
+      { icon: <RiNextjsFill size={26} />,                                  name: "Next.js",      badgeKey: "main" },
+      { icon: <FaVuejs className="text-green-400" size={26} />,            name: "Vue 3",        badgeKey: "professional" },
     ],
   },
   {
-    title: "Backend",
+    key: "backend",
     items: [
-      { icon: <FaPhp className="text-[#777BB4]" size={26} />,              name: "PHP",          badge: "Principal" },
-      { icon: <FaLaravel className="text-red-500" size={26} />,             name: "Laravel",      badge: "Principal" },
-      { icon: <FaLaravel className="text-orange-400" size={26} />,          name: "Lumen",        badge: "Profesional" },
-      { icon: <SiMongodb className="text-green-500" size={26} />,           name: "MongoDB",      badge: "Profesional" },
+      { icon: <FaPhp className="text-[#777BB4]" size={26} />,              name: "PHP",          badgeKey: "main" },
+      { icon: <FaLaravel className="text-red-500" size={26} />,             name: "Laravel",      badgeKey: "main" },
+      { icon: <FaLaravel className="text-orange-400" size={26} />,          name: "Lumen",        badgeKey: "professional" },
+      { icon: <SiMongodb className="text-green-500" size={26} />,           name: "MongoDB",      badgeKey: "professional" },
     ],
   },
   {
-    title: "Herramientas",
+    key: "tools",
     items: [
-      { icon: <RiTailwindCssFill className="text-cyan-400" size={26} />,   name: "Tailwind CSS", badge: "Principal" },
-      { icon: <FaGitAlt className="text-[#F05032]" size={26} />,            name: "Git",          badge: "Principal" },
-      { icon: <FaDocker className="text-blue-400" size={26} />,             name: "Docker",       badge: "Profesional" },
-      { icon: <FaGithub size={26} />,                                        name: "GitHub",       badge: "Principal" },
+      { icon: <RiTailwindCssFill className="text-cyan-400" size={26} />,   name: "Tailwind CSS", badgeKey: "main" },
+      { icon: <FaGitAlt className="text-[#F05032]" size={26} />,            name: "Git",          badgeKey: "main" },
+      { icon: <FaDocker className="text-blue-400" size={26} />,             name: "Docker",       badgeKey: "professional" },
+      { icon: <FaGithub size={26} />,                                        name: "GitHub",       badgeKey: "main" },
     ],
   },
 ];
@@ -50,15 +53,17 @@ const itemVariants = {
 };
 
 export default function StackSection() {
+  const { t } = useLanguage();
+
   return (
     <section id="stack" className="py-20 sm:py-28">
       <AnimatedSection>
-        <SectionTitle number="03" title="Stack" />
+        <SectionTitle number="03" title={t.stack.title} />
       </AnimatedSection>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {categories.map((cat, ci) => (
-          <AnimatedSection key={cat.title} delay={ci * 0.1}>
+        {STACK_DATA.map((cat, ci) => (
+          <AnimatedSection key={cat.key} delay={ci * 0.1}>
             <div
               className="rounded-xl p-5 h-full"
               style={{
@@ -74,7 +79,7 @@ export default function StackSection() {
                   fontFamily: "var(--font-jetbrains)",
                 }}
               >
-                {cat.title}
+                {t.stack.categories[cat.key]}
               </p>
 
               {/* Items con stagger */}
@@ -85,7 +90,7 @@ export default function StackSection() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                {cat.items.map(({ icon, name, badge }) => (
+                {cat.items.map(({ icon, name, badgeKey }) => (
                   <motion.div
                     key={name}
                     variants={itemVariants}
@@ -109,7 +114,7 @@ export default function StackSection() {
                     <span
                       className="text-xs px-2 py-0.5 rounded-full shrink-0"
                       style={
-                        badge === "Principal"
+                        badgeKey === "main"
                           ? {
                               background: "var(--accent-dim)",
                               color: "var(--accent)",
@@ -121,7 +126,7 @@ export default function StackSection() {
                             }
                       }
                     >
-                      {badge}
+                      {t.stack.badges[badgeKey]}
                     </span>
                   </motion.div>
                 ))}

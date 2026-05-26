@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IoMdDownload } from "react-icons/io";
+import { useLanguage } from "@/i18n/useLanguage";
 
 const containerVariants = {
   hidden: {},
@@ -24,6 +25,8 @@ const photoVariants = {
 };
 
 export default function HeroSection() {
+  const { t } = useLanguage();
+
   return (
     <section
       className="relative min-h-screen flex items-center overflow-hidden"
@@ -64,7 +67,7 @@ export default function HeroSection() {
               className="text-sm font-mono"
               style={{ color: "var(--accent)", fontFamily: "var(--font-jetbrains)" }}
             >
-              Hola, soy
+              {t.hero.greeting}
             </motion.p>
 
             {/* Nombre */}
@@ -73,7 +76,7 @@ export default function HeroSection() {
               className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
               style={{ color: "var(--text-primary)" }}
             >
-              Àlex Gómez Gran.
+              {t.hero.name}
             </motion.h1>
 
             {/* Tagline */}
@@ -82,9 +85,9 @@ export default function HeroSection() {
               className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight"
               style={{ color: "var(--text-secondary)" }}
             >
-              Construyo aplicaciones web{" "}
+              {t.hero.tagline}{" "}
               <span style={{ color: "var(--accent)" }}>
-                que funcionan de verdad.
+                {t.hero.taglineAccent}
               </span>
             </motion.h2>
 
@@ -94,8 +97,7 @@ export default function HeroSection() {
               className="text-base max-w-lg leading-relaxed mx-auto sm:mx-0"
               style={{ color: "var(--text-secondary)" }}
             >
-              Full-Stack Developer especializado en JavaScript y PHP. 3+ años
-              construyendo productos en producción.
+              {t.hero.subtitle}
             </motion.p>
 
             {/* CTAs */}
@@ -111,7 +113,7 @@ export default function HeroSection() {
                   color: "var(--bg-primary)",
                 }}
               >
-                Ver proyectos
+                {t.hero.cta}
               </a>
               <a
                 href="/cv.pdf"
@@ -125,7 +127,7 @@ export default function HeroSection() {
                 onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
               >
                 <IoMdDownload size={16} />
-                Descargar CV
+                {t.hero.downloadCV}
               </a>
             </motion.div>
 
@@ -207,7 +209,7 @@ export default function HeroSection() {
           style={{ color: "var(--text-muted)" }}
         >
           <span className="text-xs" style={{ fontFamily: "var(--font-jetbrains)" }}>
-            scroll
+            {t.hero.scroll}
           </span>
           <motion.div
             animate={{ y: [0, 6, 0] }}

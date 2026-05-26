@@ -6,11 +6,13 @@ import { FaLinkedin, FaGithub, FaTelegram } from "react-icons/fa";
 import { MdEmail, MdContentCopy, MdCheck } from "react-icons/md";
 import SectionTitle from "@/components/ui/SectionTitle";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { useLanguage } from "@/i18n/useLanguage";
 
 const EMAIL = "agomez99.dev@gmail.com";
 
 export default function ContactSection() {
   const [copied, setCopied] = useState(false);
+  const { t } = useLanguage();
 
   const copyEmail = async () => {
     try {
@@ -25,7 +27,7 @@ export default function ContactSection() {
   return (
     <section id="contacto" className="py-20 sm:py-28">
       <AnimatedSection>
-        <SectionTitle number="05" title="Contacto" />
+        <SectionTitle number="05" title={t.contact.title} />
       </AnimatedSection>
 
       <AnimatedSection delay={0.1}>
@@ -42,11 +44,10 @@ export default function ContactSection() {
               className="text-2xl sm:text-3xl font-bold"
               style={{ color: "var(--text-primary)" }}
             >
-              ¿Hablamos?
+              {t.contact.headline}
             </h3>
             <p className="text-base leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-              Estoy disponible para nuevos proyectos, colaboraciones o simplemente
-              para charlar sobre tecnología.
+              {t.contact.body}
             </p>
           </div>
 
@@ -62,7 +63,7 @@ export default function ContactSection() {
             }}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            aria-label={copied ? "Email copiado" : "Copiar email"}
+            aria-label={copied ? t.contact.copied : t.contact.copyLabel}
           >
             <MdEmail size={18} />
             <span className="text-sm">{EMAIL}</span>
@@ -87,7 +88,7 @@ export default function ContactSection() {
               className="text-xs -mt-4"
               style={{ color: "var(--accent)", fontFamily: "var(--font-jetbrains)" }}
             >
-              ¡Copiado al portapapeles!
+              {t.contact.copiedMsg}
             </motion.p>
           )}
 

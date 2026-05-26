@@ -4,19 +4,25 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoMdDownload } from "react-icons/io";
+import { useLanguage } from "@/i18n/useLanguage";
+import LanguageSelector from "@/components/ui/LanguageSelector";
 
-const navLinks = [
-  { href: "#about",       label: "Sobre mí" },
-  { href: "#experiencia", label: "Experiencia" },
-  { href: "#stack",       label: "Stack" },
-  { href: "#proyectos",   label: "Proyectos" },
-  { href: "#contacto",    label: "Contacto" },
-];
+// Los href (IDs de sección) son estructurales y no cambian con el idioma
+const NAV_HREFS = ["#about", "#experiencia", "#stack", "#proyectos", "#contacto"];
 
 export default function NavBar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isOpen, setIsOpen]         = useState(false);
-  const [activeSection, setActiveSection] = useState("");
+  const [isScrolled, setIsScrolled]         = useState(false);
+  const [isOpen, setIsOpen]                 = useState(false);
+  const [activeSection, setActiveSection]   = useState("");
+  const { t } = useLanguage();
+
+  const navLinks = [
+    { href: "#about",       label: t.nav.about },
+    { href: "#experiencia", label: t.nav.experience },
+    { href: "#stack",       label: t.nav.stack },
+    { href: "#proyectos",   label: t.nav.projects },
+    { href: "#contacto",    label: t.nav.contact },
+  ];
 
   // Cambia el fondo al hacer scroll
   useEffect(() => {
@@ -25,9 +31,9 @@ export default function NavBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Intersection Observer para el link activo
+  // Intersection Observer para el link activo (usa los IDs fijos, sin traducciones)
   useEffect(() => {
-    const sectionIds = navLinks.map((l) => l.href.replace("#", ""));
+    const sectionIds = NAV_HREFS.map((l) => l.replace("#", ""));
     const observers = [];
 
     sectionIds.forEach((id) => {
@@ -50,9 +56,7 @@ export default function NavBar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "border-b shadow-xl"
-          : ""
+        isScrolled ? "border-b shadow-xl" : ""
       }`}
       style={
         isScrolled
@@ -75,7 +79,7 @@ export default function NavBar() {
         </a>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => {
             const id = link.href.replace("#", "");
             const isActive = activeSection === id;
@@ -105,6 +109,9 @@ export default function NavBar() {
             );
           })}
 
+          {/* Selector de idioma */}
+          <LanguageSelector />
+
           <a
             href="/cv.pdf"
             download="CV_Agomez.pdf"
@@ -118,7 +125,7 @@ export default function NavBar() {
             onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
           >
             <IoMdDownload size={14} />
-            CV
+            {t.nav.cv}
           </a>
         </div>
 
@@ -127,7 +134,7 @@ export default function NavBar() {
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden transition-colors duration-200"
           style={{ color: "var(--text-primary)" }}
-          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-label={isOpen ? t.nav.closeMenu : t.nav.openMenu}
           aria-expanded={isOpen}
         >
           {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
@@ -164,7 +171,7 @@ export default function NavBar() {
                 onClick={closeMenu}
                 className="self-end"
                 style={{ color: "var(--text-secondary)" }}
-                aria-label="Cerrar menú"
+                aria-label={t.nav.closeMenu}
               >
                 <FaTimes size={20} />
               </button>
@@ -197,8 +204,13 @@ export default function NavBar() {
                   onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
                 >
                   <IoMdDownload size={16} />
-                  Descargar CV
+                  {t.nav.downloadCV}
                 </a>
+
+                {/* Selector de idioma en el drawer móvil */}
+                <div className="pt-2">
+                  <LanguageSelector />
+                </div>
               </nav>
             </motion.div>
           </>

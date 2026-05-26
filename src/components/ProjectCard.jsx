@@ -4,8 +4,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { techIcons } from "@/utils/techIcons";
+import { useLanguage } from "@/i18n/useLanguage";
 
 export default function ProjectCard({ project }) {
+  const { t } = useLanguage();
+
   return (
     <motion.div
       className="flex flex-col rounded-xl overflow-hidden h-full"
@@ -25,7 +28,7 @@ export default function ProjectCard({ project }) {
         {project.image ? (
           <Image
             src={project.image}
-            alt={`Imagen de ${project.name}`}
+            alt={`${t.projects.imageAlt} ${project.name}`}
             fill
             className="object-cover transition-transform duration-500 hover:scale-105"
           />
@@ -130,7 +133,7 @@ export default function ProjectCard({ project }) {
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
             >
               <FaExternalLinkAlt size={13} />
-              Ver proyecto
+              {t.projects.viewProject}
             </a>
           )}
         </div>
