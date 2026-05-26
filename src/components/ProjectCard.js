@@ -6,9 +6,9 @@ import Image from "next/image";
 
 export default function ProjectCard({ project }) {
   return (
-    <div className="flex flex-col shadow-xl bg-white p-2 rounded gap-4">
-      <div className="flex items-center justify-center">
-        <Image src="/images/projects/TaskApp/image1.webp" alt="Portada" width={200} height={300} />
+    <div className="flex flex-col shadow-xl bg-white p-2 rounded gap-4 text-black">
+      <div className="relative w-full h-52 flex items-center justify-center">
+        <Image src={project.image} alt="Portada" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
       </div>
       <span className="text-lg font-semibold">{project.name}</span>
       <p>{project.description}</p>

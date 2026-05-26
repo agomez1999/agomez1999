@@ -73,7 +73,7 @@ export default function HeroSection() {
               className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
               style={{ color: "var(--text-primary)" }}
             >
-              Àlex Gómez.
+              Àlex Gómez Gran.
             </motion.h1>
 
             {/* Tagline */}

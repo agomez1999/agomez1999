@@ -44,7 +44,7 @@ export default function AboutSection() {
             <p>
               Mi stack personal:{" "}
               <span style={{ color: "var(--accent)" }}>
-                Next.js, React y Tailwind.
+                Laravel, Next.js, React y Tailwind.
               </span>
             </p>
           </div>

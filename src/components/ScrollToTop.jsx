@@ -25,7 +25,7 @@ export default function ScrollToTop() {
           transition={{ duration: 0.2 }}
           onClick={scrollToTop}
           aria-label="Volver al inicio"
-          className="fixed bottom-6 right-6 z-40 p-3 rounded-full transition-colors duration-200"
+          className="fixed bottom-6 right-6 z-40 p-3 rounded-full transition-colors duration-200 cursor-pointer"
           style={{
             background: "var(--bg-secondary)",
             border: "1px solid var(--border-accent)",
